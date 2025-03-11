@@ -7,7 +7,7 @@ library(sctransform)
 count=Read10X("./snRNA.TestData/",gene.column=1)
 
 #Creat Seurat object for each sample
-snRNA=CreateSeuratObject(counts=count,project = "snRNA",min.cells=3,min.features=2000)
+snRNA=CreateSeuratObject(counts=count,project = "snRNA",min.cells=3)
 
 #Normalization
 snRNA=SCTransform(snRNA)
